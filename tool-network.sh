@@ -19,3 +19,9 @@ echo neofetch >> /home/$USER/.bashrc
 
 #Validação
 echo "Tudo certo meu patrão!!!"
+
+echo "Foram instaladas um conjunto de ferramentas de rede, incluindo o Nmap, uma Calculadora de IP, e uma ferramenta para checar IP em Blacklists."
+echo "Para usar as ferramentas, seguem os comandos e sintaxes:"
+echo "Nmap: nmap <ip> -p <porta>"
+echo "Calculadora IP: ipcalc <ip/mask>"
+echo "Verificação de Blacklist: bl <ip>"
