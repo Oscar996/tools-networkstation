@@ -14,7 +14,7 @@ sudo mv ./bl /usr/local/bin
 cd ~
 
 #Personalização NeoFetch
-cp /home/$USER/.bashrc
+cp /home/$USER/.bashrc .bashrc-bak
 echo neofetch >> /home/$USER/.bashrc
 
 #Validação
