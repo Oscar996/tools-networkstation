@@ -4,7 +4,7 @@ sudo apt upgrade
 sudo apt update
 
 #Instalação das aplicações
-sudo apt install -y nmap neofetch snmp speedtest-cli ipcalc traceroute mtr
+sudo apt install -y nmap neofetch snmp speedtest-cli ipcalc traceroute mtr whois
 
 #Instalação Blacklist check
 git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
