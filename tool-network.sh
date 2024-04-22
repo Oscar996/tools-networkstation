@@ -5,6 +5,8 @@ sudo apt update
 
 #Instalação das aplicações
 sudo apt install -y nmap neofetch snmp speedtest-cli ipcalc traceroute mtr whois
+#Dependências para ASN
+sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr nmap ncat aha
 
 #Instalação Blacklist check
 git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
@@ -16,6 +18,10 @@ cd ~
 #Personalização NeoFetch
 cp /home/$USER/.bashrc .bashrc-bak
 echo neofetch >> /home/$USER/.bashrc
+
+#Instalação ASN
+curl "https://raw.githubusercontent.com/nitefood/asn/master/asn" > asn && chmod 0755 asn 
+sudo cp asn /usr/bin/asn
 
 #Validação
 echo "Tudo certo meu patrão!!!"
