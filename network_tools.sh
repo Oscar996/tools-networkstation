@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# VARIABLES
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### 
+##### ##### ##### ##### ##### VARIABLES ##### ##### ##### ##### ##### 
 
 RED="\e[31;1m"
 GREEN="\e[32;1m"
@@ -39,8 +38,7 @@ APT_INSTALL_PACKAGES=(
     aha    
 )
 
-# ACTION
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### 
+##### ##### ##### ##### ##### ACTION ##### ##### ##### ##### ##### 
 
 apt_install_updates(){ #updates ?
     for update in "${APT_UPDATE_LIST[@]}"; do
@@ -64,22 +62,21 @@ apt_install_packages(){ # apt install apps?
 apt_install_updates
 apt_install_packages
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### 
+#Neofetch
+echo 'alias neo="neofetch"' >> "$HOME"/.bashrc
+echo neofetch >> "$HOME"/.bashrc
 
-#Instalação Blacklist check
-# git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
-# cd blacklist-check-unix-linux-utility
-# sudo chmod +x ./bl
-# sudo mv ./bl /usr/local/bin
-# cd ~
+#Instalação ASN
+curl "https://raw.githubusercontent.com/nitefood/asn/master/asn" > asn && \
+sudo chmod 0755 asn 
+sudo cp asn /usr/bin/asn
 
-# #Personalização NeoFetch
-# cp /home/$USER/.bashrc .bashrc-bak
-# echo neofetch >> $HOME/.bashrc
+#Blacklist
+git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
+sudo cp blacklist-check-unix-linux-utility/bl /usr/bin/bl
 
-# #Instalação ASN
-# curl "https://raw.githubusercontent.com/nitefood/asn/master/asn" > asn && chmod 0755 asn 
-# sudo cp asn /usr/bin/asn
+
+##### ##### ##### ##### ##### END ##### ##### ##### ##### ##### 
 
 # #Validação
 # echo "Tudo certo meu patrão!!!"
