@@ -10,26 +10,18 @@ BLUE="\e[34;1m"
 RESET="\e[0m"
 
 APT_UPDATE_LIST=(
-    'update --fix-missing'
-    'upgrade -y'
-    'autoclean'
-    'autoremove'
+    "update --fix-missing"
+    "upgrade -y"
+    "autoclean"
+    "autoremove"
 )
 
-# APT_INSTALL_LIST=(
-#     "git"
-#     "vim"
-#     "curl"
-#     "zsh"
-#     "speedtest"
-#     "snapd"
-#     "flatpak"
-#     # "gnome-software-plugin-flatpak" # Nao roda no kde XP
-# )
-
-SNAP_LIST=(
-    "rpi-imager"
-    "multipass"
+APT_INSTALL_PACKAGES=(
+    "git"
+    "vim"
+    "curl"
+    "zsh"
+    "flatpak"
 )
 
 # ACTION
@@ -40,6 +32,18 @@ apt_install_updates(){ #updates ?
         sudo apt "$update" > /dev/null 2>&1
     done
     echo -e "${GREEN}[INFO] - Sistema atualizado...${RESET}"
+}
+
+apt_install_packages(){
+    for package in "${APT_INSTALL_PACKAGES[@]}"; do
+        if ! which "$package" > /dev/null 2>&1; then
+            echo -e "${YELLOW}[INFO] - Instalando $package${RESET}"
+            sudo apt install "$package" -y > /dev/null 2>&1
+
+        else
+            echo -e "${GREEN}[INFO] - $package já instalado${RESET}"
+        fi
+    done
 }
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### 
