@@ -1,5 +1,3 @@
-Aqui está o README adicional com mais detalhes sobre sua jornada épica no terminal:
-
 # Domine o Terminal: Uma Odisseia Cibernética
 
 ## Bem-vindo, exploradores do mundo digital!
