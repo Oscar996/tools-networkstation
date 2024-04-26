@@ -4,10 +4,10 @@
 #####                         VARIABLES                         ##### 
 ##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
 
-RED="\e[31;1m"
+# RED="\e[31;1m"
 GREEN="\e[32;1m"
 YELLOW="\e[33;1m"
-BLUE="\e[34;1m"
+# BLUE="\e[34;1m"
 RESET="\e[0m"
 
 SLEEP="sleep 2"
@@ -69,6 +69,13 @@ apt_install_packages(){ # install apps?
 }
 
 ##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
+#####                         CALL TO ACTION                    ##### 
+##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
+
+apt_install_updates
+apt_install_packages
+
+##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
 #####                         OTHERS                            ##### 
 ##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
 
@@ -86,12 +93,6 @@ sudo mv -f asn /usr/bin/asn
 git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
 sudo cp blacklist-check-unix-linux-utility/bl /usr/bin/bl
 
-##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
-#####                         CALL TO ACTION                    ##### 
-##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
-
-apt_install_updates
-apt_install_packages
 
 ##### ##### ##### ##### ##### ##### ### ##### ##### ##### ##### ##### 
 #####                         END                               ##### 
