@@ -28,7 +28,7 @@ Para utilizar estas ferramentas poderosas, siga os passos abaixo:
 Que a força do CLI esteja com você, nobre guerreiro! Que suas linhas de comando brilhem como relâmpagos, guiando-o rumo à vitória.
 
 
-## Intalação
+## Instalação
 ```
 sudo curl -LJO https://raw.githubusercontent.com/Oscar996/tools-networkstation/main/network_tools.sh sudo chmod +777 ./network_tools.sh && ./network_tools.sh
 ```
