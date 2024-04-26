@@ -26,3 +26,9 @@ Para utilizar estas ferramentas poderosas, siga os passos abaixo:
 4. Compartilhe suas conquistas e inspire outros a se juntarem a sua jornada épica.
 
 Que a força do CLI esteja com você, nobre guerreiro! Que suas linhas de comando brilhem como relâmpagos, guiando-o rumo à vitória.
+
+
+## Intalação
+```
+sudo curl -LJO https://raw.githubusercontent.com/Oscar996/tools-networkstation/main/tool-network.sh && sudo chmod +777 ./tool-network.sh && ./tool-network.sh
+```
