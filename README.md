@@ -30,5 +30,5 @@ Que a força do CLI esteja com você, nobre guerreiro! Que suas linhas de comand
 
 ## Intalação
 ```
-sudo curl -LJO https://raw.githubusercontent.com/Oscar996/tools-networkstation/main/tool-network.sh && sudo chmod +777 ./tool-network.sh && ./tool-network.sh
+sudo curl -LJO https://raw.githubusercontent.com/Oscar996/tools-networkstation/main/network_tools.sh sudo chmod +777 ./network_tools.sh && ./network_tools.sh
 ```
