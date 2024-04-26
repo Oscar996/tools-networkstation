@@ -9,8 +9,8 @@ BLUE="\e[34;1m"
 RESET="\e[0m"
 
 APT_UPDATE_LIST=(
-    "update --fix-missing"
-    "upgrade -y"
+    "update"
+    "upgrade"
     "autoclean"
     "autoremove"
 )
@@ -41,10 +41,12 @@ APT_INSTALL_PACKAGES=(
 ##### ##### ##### ##### ##### ACTION ##### ##### ##### ##### ##### 
 
 apt_install_updates(){ #updates ?
+    echo -e "${GREEN}[INFO] - Atualizando sistema... ${RESET}"
+    
     for update in "${APT_UPDATE_LIST[@]}"; do
-        sudo apt "$update" > /dev/null 2>&1
+        sudo apt -y "$update" > /dev/null 2>&1
+        sleep 2
     done
-    echo -e "${GREEN}[INFO] - Sistema atualizado...${RESET}"
 }
 
 apt_install_packages(){ # apt install apps?
@@ -60,7 +62,7 @@ apt_install_packages(){ # apt install apps?
 }
 
 apt_install_updates
-apt_install_packages
+# apt_install_packages
 
 #Neofetch
 echo 'alias neo="neofetch"' >> "$HOME"/.bashrc
@@ -69,7 +71,7 @@ echo neofetch >> "$HOME"/.bashrc
 #Instalação ASN
 curl "https://raw.githubusercontent.com/nitefood/asn/master/asn" > asn && \
 sudo chmod 0755 asn 
-sudo cp asn /usr/bin/asn
+sudo mv -f asn /usr/bin/asn
 
 #Blacklist
 git clone https://github.com/adionditsak/blacklist-check-unix-linux-utility.git
